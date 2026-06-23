@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Mode Luxe</title>
+    <meta name="description" content="Découvrez le Salon Mode Luxe par Olena Manilyuk Kolan (salonmodeluxe.fr). Atelier d'excellence en Haute Couture, retouches de précision et cours de couture.">
+    <link rel="canonical" href="https://www.salonmodeluxe.fr">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond (Premium Serif) & Plus Jakarta Sans (Clean Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        atelier: {
+                            50: '#FAF8F5',   /* Linen White */
+                            100: '#F5EFE6',  /* Soft Ecru */
+                            200: '#E8DFD0',  /* Warm Sand */
+                            700: '#786C5F',  /* Antique Bronze */
+                            800: '#4A4036',  /* Dark Clay */
+                            900: '#1F1A15',  /* Deep Charcoal */
+                            accent: '#C5A880' /* Gold Thread */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth fade-in effects */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-atelier-50 text-atelier-900 font-sans antialiased selection:bg-atelier-accent selection:text-white">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-atelier-50/90 backdrop-blur-md border-b border-atelier-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo / Name -->
+                <div class="flex flex-col">
+                    <a href="#hero" class="group">
+                        <span class="font-serif text-2xl sm:text-3xl tracking-widest font-light text-atelier-900 group-hover:text-atelier-accent transition-colors">
+                            OLENA <span class="font-normal italic">MANILYUK</span> KOLAN
+                        </span>
+                        <div class="flex items-center gap-2 mt-0.5">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-atelier-700 font-semibold">Salon Mode Luxe &bull; Haute Couture & Cours</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-atelier-700">
+                    <a href="#services" class="hover:text-atelier-accent transition-colors">Services</a>
+                    <a href="#recyclage" class="hover:text-atelier-accent transition-colors">Recyclage Éco</a>
+                    <a href="#cours" class="hover:text-atelier-accent transition-colors">Cours de Couture</a>
+                    <a href="#atelier" class="hover:text-atelier-accent transition-colors">L'Atelier</a>
+                    <a href="#estimateur" class="hover:text-atelier-accent transition-colors">Simulateur</a>
+                    <a href="https://www.instagram.com/olena_salon_luxe/" target="_blank" rel="noopener noreferrer" class="text-atelier-700 hover:text-atelier-accent transition-colors text-lg" title="Suivez-nous sur Instagram @olena_salon_luxe">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#contact" class="px-5 py-2.5 bg-atelier-900 text-atelier-50 rounded-full hover:bg-atelier-accent hover:text-atelier-900 transition-all duration-300 text-xs shadow-md shadow-atelier-900/10">
+                        Me contacter par SMS
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <a href="https://www.instagram.com/olena_salon_luxe/" target="_blank" rel="noopener noreferrer" class="text-atelier-900 hover:text-atelier-accent text-lg" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-atelier-900 p-2 focus:outline-none" aria-label="Menu principal">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-atelier-100 border-b border-atelier-200 transition-all duration-300">
+            <div class="px-4 pt-2 pb-6 space-y-4 text-center">
+                <a href="#services" onclick="toggleMenu()" class="block py-2 text-sm uppercase tracking-wider font-semibold text-atelier-900">Services</a>
+                <a href="#recyclage" onclick="toggleMenu()" class="block py-2 text-sm uppercase tracking-wider font-semibold text-atelier-900">Recyclage Éco</a>
+                <a href="#cours" onclick="toggleMenu()" class="block py-2 text-sm uppercase tracking-wider font-semibold text-atelier-900">Cours de Couture</a>
+                <a href="#atelier" onclick="toggleMenu()" class="block py-2 text-sm uppercase tracking-wider font-semibold text-atelier-900">L'Atelier</a>
+                <a href="#estimateur" onclick="toggleMenu()" class="block py-2 text-sm uppercase tracking-wider font-semibold text-atelier-900">Simulateur</a>
+                <a href="https://www.instagram.com/olena_salon_luxe/" target="_blank" rel="noopener noreferrer" class="block py-2 text-sm uppercase tracking-wider font-semibold text-atelier-900 text-atelier-accent">
+                    <i class="fa-brands fa-instagram mr-2"></i>@olena_salon_luxe
+                </a>
+                <a href="#contact" onclick="toggleMenu()" class="inline-block w-full py-3 bg-atelier-900 text-atelier-50 rounded-xl font-semibold text-sm">
+                    <i class="fa-solid fa-comment-sms mr-2"></i> SMS : 07 82 41 26 24
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Showcase Section -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center overflow-hidden py-12 md:py-24 bg-gradient-to-br from-atelier-50 via-atelier-100 to-atelier-200/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content Area -->
+                <div class="lg:col-span-7 flex flex-col justify-center space-y-8 text-center lg:text-left">
+                    <!-- Premium Haute Couture Badge -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                        <span class="px-4 py-1.5 rounded bg-atelier-accent/15 text-atelier-800 text-xs font-semibold tracking-widest uppercase border border-atelier-accent/20">
+                            <i class="fa-solid fa-graduation-cap mr-1.5"></i> Diplômée de Haute Couture
+                        </span>
+                        <a href="#cours" class="px-4 py-1.5 rounded bg-emerald-500/10 text-emerald-800 text-xs font-semibold tracking-widest uppercase border border-emerald-500/20 hover:bg-emerald-500/20 transition-all duration-300">
+                            <i class="fa-solid fa-star mr-1.5 animate-pulse"></i> Nouveauté : Cours de Couture
+                        </a>
+                    </div>
+
+                    <!-- Main Catchphrase -->
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-atelier-900">
+                        L'art du fil & du <span class="italic font-normal text-atelier-accent">sur-mesure</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-atelier-700 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Atelier artisanal de retouche d'excellence et de création unique. Sublimez votre garde-robe ou apprenez l'art de la couture à nos côtés.
+                    </p>
+
+                    <!-- Trust indicators -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                        <div class="flex items-center gap-2 text-atelier-800 text-sm font-medium bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-atelier-200">
+                            <i class="fa-solid fa-scissors text-atelier-accent"></i> Travaux de couture
+                        </div>
+                        <div class="flex items-center gap-2 text-atelier-800 text-sm font-medium bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-atelier-200">
+                            <i class="fa-solid fa-leaf text-atelier-accent"></i> Upcycling & Recyclage
+                        </div>
+                        <div class="flex items-center gap-2 text-atelier-800 text-sm font-medium bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg border border-atelier-200">
+                            <i class="fa-solid fa-user-group text-atelier-accent"></i> Cours hebdomadaires
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-atelier-900 text-white rounded-xl font-medium tracking-wide hover:bg-atelier-accent hover:text-atelier-900 transition-all duration-300 shadow-xl shadow-atelier-900/15 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-comment-sms text-lg animate-pulse"></i>
+                            <span>Envoyer un SMS pour RDV</span>
+                        </a>
+                        <a href="#cours" class="w-full sm:w-auto px-8 py-4 bg-white text-atelier-900 border border-atelier-200 rounded-xl font-medium tracking-wide hover:bg-atelier-100 hover:border-atelier-700 transition-all duration-300 flex items-center justify-center gap-2">
+                            <span>S'inscrire aux cours</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- SMS & Instagram Notice -->
+                    <div class="flex flex-col space-y-1 text-xs text-atelier-700/80 font-medium italic lg:text-left text-center">
+                        <p>
+                            <i class="fa-solid fa-circle-info mr-1"></i> Réponse rapide garantie par SMS uniquement : <strong>07 82 41 26 24</strong>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-instagram mr-1 text-atelier-accent"></i> Retrouvez l'univers de l'atelier sur Instagram : <a href="https://www.instagram.com/olena_salon_luxe/" target="_blank" rel="noopener noreferrer" class="underline hover:text-atelier-accent font-bold">@olena_salon_luxe</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Visual Area -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-atelier-900/20 border-8 border-white bg-atelier-200">
+                        <!-- Background Texture overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-900/40 via-transparent to-transparent z-10"></div>
+                        
+                        <!-- High fashion tailor aesthetic placeholder image -->
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=800" 
+                             alt="Atelier de Couture Professionnel - Olena Manilyuk Kolan" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/800x1000/F5EFE6/4A4036?text=Atelier+Olena+Couture'">
+
+                        <!-- Overlay details -->
+                        <div class="absolute bottom-6 left-6 right-6 z-20 text-white">
+                            <div class="backdrop-blur-md bg-atelier-900/60 p-5 rounded-2xl border border-white/20">
+                                <span class="text-atelier-accent text-xs font-bold uppercase tracking-widest block mb-1">Inspiré de l'Atelier</span>
+                                <h3 class="font-serif text-2xl font-light">L'Excellence du Geste</h3>
+                                <p class="text-xs text-white/80 mt-1">Chaque vêtement confié et chaque technique enseignée répondent aux standards rigoureux de la Haute Couture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section id="services" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-atelier-accent font-semibold tracking-[0.2em] text-xs uppercase block">Prestations d'Excellence</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-atelier-900">
+                    Tous Travaux de Couture & Création
+                </h2>
+                <div class="h-[2px] w-20 bg-atelier-accent mx-auto mt-4"></div>
+                <p class="text-atelier-700 text-sm sm:text-base font-light max-w-lg mx-auto">
+                    Que ce soit pour réajuster un vêtement adoré, réparer un accroc ou donner vie à un projet sur-mesure unique.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1: Retouches & Réparations -->
+                <div class="bg-atelier-50 rounded-3xl p-8 border border-atelier-200/60 shadow-sm hover:shadow-xl hover:border-atelier-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-atelier-accent text-2xl shadow-sm border border-atelier-100 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-serif text-2xl font-semibold text-atelier-900">Retouches & Ajustements</h3>
+                            <p class="text-sm text-atelier-700 font-light leading-relaxed">
+                                Un ajustement millimétré pour redonner une silhouette parfaite à vos tenues de tous les jours ou d'exception.
+                            </p>
+                        </div>
+                        <ul class="space-y-3 pt-2 text-sm text-atelier-800">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                <strong>Ourlets :</strong> Jeans, pantalons de costume, jupes, robes
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                <strong>Réparations :</strong> Accrocs, doublures, fermetures éclair
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                <strong>Boutonnages :</strong> Recouture solide, œillets, pressions
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                <strong>Ajustements :</strong> Prise ou élargissement de taille
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-8 border-t border-atelier-200/50 mt-6 flex justify-between items-center">
+                        <span class="text-xs uppercase tracking-wider text-atelier-700 font-semibold">Tarifs indicatifs</span>
+                        <span class="text-sm font-semibold text-atelier-accent bg-white px-3 py-1 rounded-full border border-atelier-200">À partir de 12€</span>
+                    </div>
+                </div>
+
+                <!-- Service 2: Création de vêtements de tous tissus -->
+                <div class="bg-atelier-50 rounded-3xl p-8 border border-atelier-200/60 shadow-sm hover:shadow-xl hover:border-atelier-accent/50 transition-all duration-300 flex flex-col justify-between group md:scale-105 md:ring-2 md:ring-atelier-accent/30 relative overflow-hidden">
+                    <!-- Featured Corner Ribbon -->
+                    <div class="absolute top-0 right-0 bg-atelier-accent text-atelier-900 text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-bl-xl">
+                        Spécialité
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-atelier-accent text-2xl shadow-sm border border-atelier-100 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-serif text-2xl font-semibold text-atelier-900">Création Sur-Mesure</h3>
+                            <p class="text-sm text-atelier-700 font-light leading-relaxed">
+                                Donnez vie à la pièce de vos rêves. Nous créons des pièces uniques à partir de tout type de tissus et de patrons.
+                            </p>
+                        </div>
+                        <ul class="space-y-3 pt-2 text-sm text-atelier-800">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Prise de mesures et étude morphologique
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Réalisation à partir de tout type de tissus
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Robes, vestes, jupes, ensembles, chemises
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Finitions artisanales d'exception (Haute Couture)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-8 border-t border-atelier-200/50 mt-6 flex justify-between items-center">
+                        <span class="text-xs uppercase tracking-wider text-atelier-700 font-semibold">Tarifs indicatifs</span>
+                        <span class="text-sm font-semibold text-atelier-accent bg-white px-3 py-1 rounded-full border border-atelier-200">Sur devis</span>
+                    </div>
+                </div>
+
+                <!-- Service 3: Recyclage de vêtements / Upcycling -->
+                <div class="bg-atelier-50 rounded-3xl p-8 border border-atelier-200/60 shadow-sm hover:shadow-xl hover:border-atelier-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-6">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-atelier-accent text-2xl shadow-sm border border-atelier-100 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-recycle"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-serif text-2xl font-semibold text-atelier-900">Couture Éco-Responsable</h3>
+                            <p class="text-sm text-atelier-700 font-light leading-relaxed">
+                                Ne jetez plus vos anciens vêtements. Réutilisez les tissus des habits oubliés dans votre armoire pour en faire de nouvelles merveilles.
+                            </p>
+                        </div>
+                        <ul class="space-y-3 pt-2 text-sm text-atelier-800">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Transformation de jeans en jupes ou sacs
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Modernisation de coupes anciennes obsolètes
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Assemblage de coupons de tissus inutilisés
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-atelier-accent"></span>
+                                Créations éco-conçues uniques
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-8 border-t border-atelier-200/50 mt-6 flex justify-between items-center">
+                        <span class="text-xs uppercase tracking-wider text-atelier-700 font-semibold">Tarifs indicatifs</span>
+                        <span class="text-sm font-semibold text-atelier-accent bg-white px-3 py-1 rounded-full border border-atelier-200">Sur devis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eco-responsible Upcycling Focus Area -->
+    <section id="recyclage" class="py-20 bg-atelier-100 border-y border-atelier-200/60 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Visual Left Column -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm aspect-square bg-white p-4 rounded-3xl shadow-xl border border-atelier-200 flex flex-col justify-between">
+                        <div class="h-[75%] rounded-2xl overflow-hidden bg-atelier-200 relative group">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600" 
+                                 alt="Recyclage de tissus et vêtements créatif" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x600/FAF8F5/4A4036?text=Upcycling+Tissus'">
+                        </div>
+                        <div class="p-2 text-center">
+                            <blockquote class="font-serif italic text-base text-atelier-800">
+                                "Rien ne se perd, tout se transforme en élégance."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Right Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="text-xs uppercase tracking-[0.2em] font-bold text-atelier-accent">Engagement Durable</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-light text-atelier-900 leading-tight">
+                        Pensez à réutiliser le tissu des vêtements que vous ne mettez plus !
+                    </h2>
+                    
+                    <p class="text-base text-atelier-700 font-light leading-relaxed">
+                        Chaque armoire renferme des trésors oubliés. Un pull en laine d’excellente facture troué aux coudes, un manteau de famille à la coupe démodée mais au tissu noble... À travers notre service de recyclage de vêtements, nous redonnons une nouvelle jeunesse et une seconde histoire à vos textiles préférés.
+                    </p>
+
+                    <!-- Beautifully Framed Original Text -->
+                    <div class="p-6 bg-white/80 rounded-2xl border-l-4 border-atelier-accent shadow-sm">
+                        <p class="text-atelier-800 italic font-serif text-lg leading-relaxed">
+                            "Pensez à réutiliser le tissu des vêtements que vous ne mettez plus, pour en faire quelque chose de nouveau."
+                        </p>
+                        <span class="block mt-2 text-xs font-semibold uppercase tracking-wider text-atelier-700">
+                            — Philosophie de l'Atelier Olena
+                        </span>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="px-6 py-3.5 bg-atelier-900 text-white rounded-xl text-sm font-semibold tracking-wide hover:bg-atelier-accent hover:text-atelier-900 transition-all duration-300 shadow-md">
+                            <i class="fa-solid fa-leaf mr-2 text-emerald-400"></i> Proposer un vêtement à transformer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sewing Classes Section -->
+    <section id="cours" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-atelier-accent font-semibold tracking-[0.2em] text-xs uppercase block">
+                    <i class="fa-solid fa-graduation-cap mr-1.5 animate-bounce"></i> Apprentissage & Partage
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-atelier-900">
+                    Découvrez nos Cours de Couture
+                </h2>
+                <div class="h-[2px] w-20 bg-atelier-accent mx-auto mt-4"></div>
+                <p class="text-atelier-700 text-sm sm:text-base font-light max-w-lg mx-auto">
+                    Que vous soyez débutante ou désireuse de perfectionner votre technique, apprenez les secrets d'un travail d'excellence à l'Atelier.
+                </p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Details & Specific Info -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-800 px-4 py-2 rounded-xl border border-emerald-500/20">
+                        <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
+                        <span class="text-xs font-bold tracking-wider uppercase">Inscriptions Ouvertes — Rentrée 1er Septembre</span>
+                    </div>
+
+                    <h3 class="font-serif text-2xl sm:text-3xl font-light text-atelier-900 leading-tight">
+                        Un accompagnement personnalisé au fil de vos projets
+                    </h3>
+
+                    <p class="text-base text-atelier-700 font-light leading-relaxed">
+                        Pour vous assurer un suivi attentif et un apprentissage de qualité, nos cours se déroulent dans un cadre convivial et en effectif volontairement restreint. Vous travaillerez directement sur vos propres projets avec les conseils experts d'Olena, diplômée d'État de Haute Couture.
+                    </p>
+
+                    <!-- Technical Specs Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <!-- Spec 1: Schedule -->
+                        <div class="bg-atelier-50 p-5 rounded-2xl border border-atelier-200 hover:border-atelier-accent/50 transition-all duration-300">
+                            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-atelier-accent text-lg shadow-sm border border-atelier-100 mb-4">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <h4 class="font-semibold text-atelier-900 text-sm mb-1">Tous les samedis</h4>
+                            <p class="text-xs text-atelier-700">Rendez-vous hebdomadaire pour progresser régulièrement.</p>
+                        </div>
+
+                        <!-- Spec 2: Class size -->
+                        <div class="bg-atelier-50 p-5 rounded-2xl border border-atelier-200 hover:border-atelier-accent/50 transition-all duration-300">
+                            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-atelier-accent text-lg shadow-sm border border-atelier-100 mb-4">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                            <h4 class="font-semibold text-atelier-900 text-sm mb-1">7 à 10 élèves</h4>
+                            <p class="text-xs text-atelier-700">Effectif réduit pour un suivi personnalisé sur-mesure.</p>
+                        </div>
+
+                        <!-- Spec 3: Start Date -->
+                        <div class="bg-atelier-50 p-5 rounded-2xl border border-atelier-200 hover:border-atelier-accent/50 transition-all duration-300">
+                            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-atelier-accent text-lg shadow-sm border border-atelier-100 mb-4">
+                                <i class="fa-solid fa-flag"></i>
+                            </div>
+                            <h4 class="font-semibold text-atelier-900 text-sm mb-1">Rentrée : 1er Sept.</h4>
+                            <p class="text-xs text-atelier-700">Début des sessions d'apprentissage annuel de l'atelier.</p>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Box -->
+                    <div class="p-6 bg-atelier-100 rounded-2xl border-l-4 border-atelier-accent shadow-sm flex items-start gap-4">
+                        <div class="text-2xl text-atelier-accent pt-1">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-atelier-900 text-sm uppercase tracking-wide">Comment réserver ?</h4>
+                            <p class="text-xs text-atelier-800 mt-1 leading-relaxed">
+                                Les places étant strictement limitées pour préserver la qualité de l'apprentissage (maximum 10 élèves par groupe), les réservations se font par simple demande SMS. Vous pouvez pré-remplir votre demande d'inscription grâce au simulateur ou au formulaire ci-dessous.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                        <button onclick="selectLessonsAndScroll()" class="px-6 py-3.5 bg-atelier-900 text-white rounded-xl text-sm font-semibold tracking-wide hover:bg-atelier-accent hover:text-atelier-900 transition-all duration-300 shadow-md flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-graduation-cap"></i> Pré-remplir mon SMS d'inscription
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Visual representation -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border border-atelier-200">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" 
+                             alt="Élèves apprenant la couture en atelier" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/600x850/FAF8F5/4A4036?text=Cours+De+Couture'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-900/60 to-transparent flex items-end p-8">
+                            <div class="text-white">
+                                <span class="text-atelier-accent text-xs font-bold uppercase tracking-widest block mb-1">Ambiance chaleureuse</span>
+                                <h4 class="font-serif text-xl">Savoir, technique et créativité</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Estimator & Quote Simulator -->
+    <section id="estimateur" class="py-24 bg-atelier-50 border-t border-atelier-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-atelier-accent font-semibold tracking-[0.2em] text-xs uppercase block">Simplicité & Transparence</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-light text-atelier-900">
+                    Estimer votre Retouche, Création ou Cours
+                </h2>
+                <div class="h-[2px] w-20 bg-atelier-accent mx-auto mt-4"></div>
+                <p class="text-atelier-700 text-sm font-light">
+                    Sélectionnez vos besoins ci-dessous pour calculer une estimation budgétaire et préparer directement votre message SMS.
+                </p>
+            </div>
+
+            <!-- Simulator Widget Container -->
+            <div class="bg-white rounded-3xl border border-atelier-200 shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12">
+                <!-- Left configuration column -->
+                <div class="p-8 md:col-span-7 space-y-6">
+                    <h3 class="text-lg font-bold text-atelier-900 tracking-wide border-b border-atelier-200 pb-3">
+                        <i class="fa-solid fa-list-check mr-2 text-atelier-accent"></i> Vos choix de prestations
+                    </h3>
+
+                    <!-- Service Selector Cards -->
+                    <div class="space-y-3">
+                        <!-- Option 1: Ourlet -->
+                        <label class="flex items-center justify-between p-4 bg-atelier-50 rounded-2xl border border-atelier-200 cursor-pointer hover:border-atelier-accent hover:bg-atelier-100/40 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" name="calc-service" value="Ourlet simple" data-price="12" class="w-5 h-5 accent-atelier-accent rounded border-gray-300 focus:ring-atelier-accent" onchange="calculateTotal()">
+                                <div class="flex flex-col">
+                                    <span class="font-medium text-atelier-900 text-sm">Ourlet simple (Pantalon, Jupe)</span>
+                                    <span class="text-xs text-atelier-700">Raccourcir proprement avec finition machine</span>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-atelier-accent">~12 €</span>
+                        </label>
+
+                        <!-- Option 2: Ourlet Invisible / Robe -->
+                        <label class="flex items-center justify-between p-4 bg-atelier-50 rounded-2xl border border-atelier-200 cursor-pointer hover:border-atelier-accent hover:bg-atelier-100/40 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" name="calc-service" value="Ourlet invisible" data-price="18" class="w-5 h-5 accent-atelier-accent rounded border-gray-300 focus:ring-atelier-accent" onchange="calculateTotal()">
+                                <div class="flex flex-col">
+                                    <span class="font-medium text-atelier-900 text-sm">Ourlet invisible à la main</span>
+                                    <span class="text-xs text-atelier-700">Finition haut de gamme invisible extérieurement</span>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-atelier-accent">~18 €</span>
+                        </label>
+
+                        <!-- Option 3: Changement fermeture -->
+                        <label class="flex items-center justify-between p-4 bg-atelier-50 rounded-2xl border border-atelier-200 cursor-pointer hover:border-atelier-accent hover:bg-atelier-100/40 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" name="calc-service" value="Changement de fermeture" data-price="20" class="w-5 h-5 accent-atelier-accent rounded border-gray-300 focus:ring-atelier-accent" onchange="calculateTotal()">
+                                <div class="flex flex-col">
+                                    <span class="font-medium text-atelier-900 text-sm">Changement fermeture éclair</span>
+                                    <span class="text-xs text-atelier-700">Pour jeans, vestes, robes ou jupes</span>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-atelier-accent">~20 €</span>
+                        </label>
+
+                        <!-- Option 4: Réparation / Boutons -->
+                        <label class="flex items-center justify-between p-4 bg-atelier-50 rounded-2xl border border-atelier-200 cursor-pointer hover:border-atelier-accent hover:bg-atelier-100/40 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" name="calc-service" value="Réparation de bouton ou accroc" data-price="8" class="w-5 h-5 accent-atelier-accent rounded border-gray-300 focus:ring-atelier-accent" onchange="calculateTotal()">
+                                <div class="flex flex-col">
+                                    <span class="font-medium text-atelier-900 text-sm">Boutonnages & Petits accrocs</span>
+                                    <span class="text-xs text-atelier-700">Recouture solide de bouton, réparation déchirure</span>
+                                </div>
+                            </div>
+                            <span class="text-sm font-bold text-atelier-accent">~8 €</span>
+                        </label>
+
+                        <!-- Option 5: Cours de couture -->
+                        <label id="checkbox-lessons-container" class="flex items-center justify-between p-4 bg-emerald-500/5 rounded-2xl border border-emerald-300/60 cursor-pointer hover:border-emerald-500 hover:bg-emerald-500/10 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="checkbox-lessons" name="calc-service" value="Inscription aux Cours de Couture (Samedi)" data-price="0" class="w-5 h-5 accent-emerald-500 rounded border-gray-300 focus:ring-emerald-500" onchange="calculateTotal()">
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-emerald-900 text-sm flex items-center gap-1.5">
+                                        Cours de Couture (Tous les samedis) <span class="text-[10px] bg-emerald-500 text-white px-1.5 py-0.5 rounded-full uppercase font-bold">Nouveau</span>
+                                    </span>
+                                    <span class="text-xs text-emerald-800">Rentrée 1er septembre | Groupe de 7 à 10 élèves</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-500/20 px-2.5 py-1 rounded-md">Sur demande</span>
+                        </label>
+
+                        <!-- Option 6: Création sur mesure -->
+                        <label class="flex items-center justify-between p-4 bg-atelier-50 rounded-2xl border border-atelier-200 cursor-pointer hover:border-atelier-accent hover:bg-atelier-100/40 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" name="calc-service" value="Création de vêtement sur-mesure" data-price="0" class="w-5 h-5 accent-atelier-accent rounded border-gray-300 focus:ring-atelier-accent" onchange="calculateTotal()">
+                                <div class="flex flex-col">
+                                    <span class="font-medium text-atelier-900 text-sm">Projet de création ou de recyclage</span>
+                                    <span class="text-xs text-atelier-700">Robes, vestes, recyclage de vieux habits</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-semibold text-atelier-700 bg-atelier-100 px-2.5 py-1 rounded-md">Sur devis</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Right preview / CTA column -->
+                <div class="p-8 md:col-span-5 bg-atelier-900 text-white flex flex-col justify-between space-y-8">
+                    <div class="space-y-4">
+                        <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-atelier-accent block">Récapitulatif Estimatif</span>
+                        <div class="space-y-2">
+                            <p class="text-xs text-white/60">Services sélectionnés :</p>
+                            <div id="calc-selected-list" class="text-sm text-atelier-100 font-light space-y-1">
+                                <span class="text-white/40 italic text-xs">Aucun service sélectionné</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price box -->
+                    <div class="border-y border-white/15 py-4 my-2">
+                        <div class="flex justify-between items-baseline">
+                            <span class="text-sm text-white/70">Total Estimé :</span>
+                            <span id="calc-total" class="font-serif text-3xl font-light text-atelier-accent">0 €</span>
+                        </div>
+                        <p class="text-[10px] text-white/50 mt-1">
+                            *Tarif indicatif hors fournitures complexes. Un devis final vous sera confirmé après examen du tissu ou lors de l'étude d'inscription.
+                        </p>
+                    </div>
+
+                    <!-- Direct generation button -->
+                    <button onclick="copyEstimateAndScrollToContact()" class="w-full bg-white text-atelier-900 hover:bg-atelier-accent hover:text-atelier-900 py-3.5 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Valider mon choix</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Studio / Showcase Grid -->
+    <section id="atelier" class="py-24 bg-atelier-100 border-t border-atelier-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Details: Diplomas & Values -->
+                <div class="space-y-8">
+                    <div class="space-y-3">
+                        <span class="text-atelier-accent font-semibold tracking-[0.2em] text-xs uppercase block">L'Excellence du Diplôme</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-atelier-900">
+                            Olena Manilyuk Kolan
+                        </h2>
+                        <p class="text-lg italic font-serif text-atelier-700">
+                            Diplômée de Haute Couture
+                        </p>
+                    </div>
+
+                    <p class="text-base text-atelier-800 font-light leading-relaxed">
+                        Forte d’un diplôme d’État d'excellence en Haute Couture, Olena met tout son amour de la mode et de l'artisanat textile au service de votre dressing. Que ce soit pour un ajustement délicat sur une robe de mariée, la réfection complexe d’un manteau de laine, la conception d'une pièce entière d'après croquis ou encore l'initiation aux secrets de l'art du fil lors de ses cours collectifs hebdomadaires, chaque geste est guidé par le souci permanent de la finition parfaite.
+                    </p>
+
+                    <!-- Features/Benefits Checklist -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-atelier-accent mt-0.5"><i class="fa-regular fa-circle-check text-lg"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-atelier-900 text-sm">Finition Haute Couture</h4>
+                                <p class="text-xs text-atelier-700">Des coutures invisibles et extrêmement durables.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-atelier-accent mt-0.5"><i class="fa-regular fa-circle-check text-lg"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-atelier-900 text-sm">Tous types de tissus</h4>
+                                <p class="text-xs text-atelier-700">Soie, lin, coton, laine, cuir léger, tissus synthétiques ou délicats.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-atelier-accent mt-0.5"><i class="fa-regular fa-circle-check text-lg"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-atelier-900 text-sm">Pédagogie bienveillante</h4>
+                                <p class="text-xs text-atelier-700">Cours collectifs limités à 7-10 élèves pour une écoute pas à pas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-atelier-accent mt-0.5"><i class="fa-regular fa-circle-check text-lg"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-atelier-900 text-sm">Proximité & Clarté</h4>
+                                <p class="text-xs text-atelier-700">Échanges simples et directs par SMS pour votre confort.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Official SIRET details -->
+                    <div class="bg-white/80 p-5 rounded-2xl border border-atelier-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest font-bold text-atelier-700 block">Enregistrement Légal</span>
+                            <span class="text-sm font-semibold text-atelier-900">SIRET : 951 675 875 00045</span>
+                        </div>
+                        <span class="px-3 py-1 bg-atelier-accent/20 text-atelier-900 text-xs font-bold uppercase rounded-full border border-atelier-accent/10">
+                            Entreprise Déclarée
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Showcase -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Détail de couture à l'aiguille" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/400x530/F5EFE6/4A4036?text=Atelier+Haute+Couture'">
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1520013817300-1f4c1cb245ef?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Machine à coudre professionnelle" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/400x400/F5EFE6/4A4036?text=Machine'">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Tissus et bobines" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/400x400/F5EFE6/4A4036?text=Bobines'">
+                        </div>
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Vêtements en lin cintrés" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/400x530/F5EFE6/4A4036?text=Créations'">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section with SMS generator -->
+    <section id="contact" class="py-24 bg-atelier-900 text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Left Details: How to book -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-3">
+                        <span class="text-atelier-accent font-semibold tracking-[0.2em] text-xs uppercase block">Prendre Rendez-vous / S'inscrire</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
+                            Parlons de vos vêtements & projets
+                        </h2>
+                        <div class="h-[2px] w-12 bg-atelier-accent mt-4"></div>
+                    </div>
+
+                    <p class="text-sm sm:text-base text-atelier-200 font-light leading-relaxed">
+                        Pour me dévouer pleinement à mes travaux de couture minutieux et à la pédagogie avec mes élèves, je ne réponds pas aux appels directs afin de rester concentrée. 
+                        <br><br>
+                        Je vous invite à m'envoyer un <strong class="text-white">SMS uniquement</strong> ou à me contacter sur mon compte Instagram officiel. Je vous répondrai très rapidement pour convenir d'un rendez-vous de dépôt ou d'inscription.
+                    </p>
+
+                    <!-- Contact details lists -->
+                    <div class="space-y-4 pt-4">
+                        <!-- Phone detail -->
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-atelier-accent/20 flex items-center justify-center text-atelier-accent text-xl">
+                                <i class="fa-solid fa-comment-sms"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest text-atelier-200 block">SMS Uniquement</span>
+                                <a href="sms:+33782412624" class="text-lg font-bold text-white hover:text-atelier-accent transition-colors">07 82 41 26 24</a>
+                            </div>
+                        </div>
+
+                        <!-- Instagram detail -->
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-atelier-accent/20 flex items-center justify-center text-atelier-accent text-xl">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest text-atelier-200 block">Instagram</span>
+                                <a href="https://www.instagram.com/olena_salon_luxe/" target="_blank" rel="noopener noreferrer" class="text-lg font-bold text-white hover:text-atelier-accent transition-colors">@olena_salon_luxe</a>
+                            </div>
+                        </div>
+
+                        <!-- Status indicator -->
+                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10">
+                            <div class="w-12 h-12 rounded-xl bg-atelier-accent/20 flex items-center justify-center text-atelier-accent text-xl">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] uppercase tracking-widest text-atelier-200 block">Horaires de réponse</span>
+                                <span class="text-sm font-semibold text-white">Lundi au Samedi : 9h00 - 19h00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust statement -->
+                    <div class="p-5 bg-atelier-accent/15 rounded-2xl border border-atelier-accent/20 text-xs text-atelier-100 italic space-y-2">
+                        <p class="font-semibold text-white">📍 Fonctionnement pratique :</p>
+                        <p>1. Choisissez vos prestations ou vos cours de couture.</p>
+                        <p>2. Envoyez votre projet de couture ou demande d'inscription.</p>
+                        <p>3. Nous convenons d'un rendez-vous de couture ou validons votre place pour les cours du samedi.</p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive SMS Builder -->
+                <div class="lg:col-span-7 bg-white text-atelier-900 rounded-3xl p-6 sm:p-10 shadow-2xl border border-atelier-200 relative">
+                    <!-- Top badge banner -->
+                    <div class="absolute -top-4 left-6 sm:left-10 bg-atelier-accent text-atelier-900 text-xs font-bold uppercase tracking-widest py-1.5 px-4 rounded-lg shadow-md">
+                        <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Générateur de SMS Intelligent
+                    </div>
+
+                    <div class="space-y-6 pt-4">
+                        <div class="space-y-1">
+                            <h3 class="font-serif text-2xl font-light text-atelier-900">Préparer mon SMS en 1 clic</h3>
+                            <p class="text-xs text-atelier-700">Remplissez ces quelques informations. Nous générerons le texte du SMS parfait pour Olena. Vous n'aurez plus qu'à cliquer pour l'envoyer !</p>
+                        </div>
+
+                        <!-- Interactive inputs -->
+                        <div class="space-y-4">
+                            <!-- Name input -->
+                            <div>
+                                <label for="sms-name" class="block text-xs font-semibold text-atelier-800 uppercase tracking-wider mb-2">Votre Prénom & Nom</label>
+                                <input type="text" id="sms-name" placeholder="Ex: Marie Dupont" class="w-full px-4 py-3 rounded-xl border border-atelier-200 text-sm focus:ring-2 focus:ring-atelier-accent focus:border-atelier-accent outline-none transition-all">
+                            </div>
+
+                            <!-- Pre-selected estimation readout -->
+                            <div id="sms-estimation-block" class="hidden bg-atelier-100 p-4 rounded-xl border border-atelier-200 text-xs">
+                                <div class="flex justify-between font-semibold text-atelier-900">
+                                    <span>Prestations issues du simulateur :</span>
+                                    <span id="sms-estimated-price" class="text-atelier-accent"></span>
+                                </div>
+                                <p id="sms-estimated-text" class="text-atelier-700 mt-1 italic"></p>
+                            </div>
+
+                            <!-- Custom Message / Detail area -->
+                            <div>
+                                <label for="sms-detail" class="block text-xs font-semibold text-atelier-800 uppercase tracking-wider mb-2">Détails de votre vêtement, tissu ou projet de cours</label>
+                                <textarea id="sms-detail" rows="3" placeholder="Ex: Bonjour Olena, je souhaite m'inscrire pour les cours de couture du samedi à la rentrée du 1er septembre, ou réparer un chemisier en soie..." class="w-full px-4 py-3 rounded-xl border border-atelier-200 text-sm focus:ring-2 focus:ring-atelier-accent focus:border-atelier-accent outline-none transition-all resize-none"></textarea>
+                            </div>
+
+                            <!-- Live SMS Preview panel -->
+                            <div class="space-y-2">
+                                <span class="block text-[10px] font-bold text-atelier-700 uppercase tracking-wider">Aperçu du SMS qui sera envoyé :</span>
+                                <div class="bg-atelier-50 rounded-2xl p-4 border border-atelier-200 text-xs text-atelier-800 font-mono whitespace-pre-line relative">
+                                    <div class="absolute top-2 right-2 text-[10px] text-atelier-accent font-semibold uppercase">SMS Pro</div>
+                                    <p id="sms-preview-text">Bonjour Olena, je souhaite vous confier des travaux de couture...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Send Button -->
+                        <div class="pt-4 space-y-3">
+                            <button onclick="sendPreparedSMS()" class="w-full bg-atelier-900 hover:bg-atelier-accent hover:text-atelier-900 text-white font-semibold py-4 rounded-xl shadow-xl transition-all duration-300 flex items-center justify-center gap-3">
+                                <i class="fa-solid fa-paper-plane text-lg"></i>
+                                <span class="tracking-wide">Envoyer par SMS (07 82 41 26 24)</span>
+                            </button>
+                            <p class="text-[11px] text-center text-atelier-700">
+                                <i class="fa-solid fa-shield-halved mr-1"></i> En cliquant, votre messagerie SMS s'ouvrira avec le texte déjà rédigé.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-3">
+                <span class="text-atelier-accent font-semibold tracking-[0.2em] text-xs uppercase block">Questions fréquentes</span>
+                <h2 class="font-serif text-3xl font-light text-atelier-900">Pour un dépôt en toute sérénité</h2>
+                <div class="h-[2px] w-20 bg-atelier-accent mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="bg-atelier-50 rounded-2xl p-6 border border-atelier-200">
+                    <h3 class="font-serif text-lg font-bold text-atelier-900 flex items-center gap-3">
+                        <span class="text-atelier-accent font-sans text-base">01.</span>
+                        Quels types de vêtements puis-je confier ?
+                    </h3>
+                    <p class="text-sm text-atelier-700 mt-2 pl-7 font-light">
+                        Grâce à une formation exigeante en Haute Couture, nous prenons en charge tous les textiles : du prêt-à-porter quotidien (jeans, vestes, T-shirts) aux tenues d'exception (robes de soirée, tailleurs sur mesure, soies, velours et matières délicates).
+                    </p>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-atelier-50 rounded-2xl p-6 border border-atelier-200">
+                    <h3 class="font-serif text-lg font-bold text-atelier-900 flex items-center gap-3">
+                        <span class="text-atelier-accent font-sans text-base">02.</span>
+                        Dois-je laver mes vêtements avant de les apporter ?
+                    </h3>
+                    <p class="text-sm text-atelier-700 mt-2 pl-7 font-light">
+                        <strong>Oui, impérativement.</strong> Pour des raisons d'hygiène évidentes et pour protéger le matériel professionnel de couture de l'atelier, tous les habits confiés pour retouches ou transformation doivent être apportés propres et repassés.
+                    </p>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-atelier-50 rounded-2xl p-6 border border-atelier-200">
+                    <h3 class="font-serif text-lg font-bold text-atelier-900 flex items-center gap-3">
+                        <span class="text-atelier-accent font-sans text-base">03.</span>
+                        Comment fonctionnent vos nouveaux cours de couture ?
+                    </h3>
+                    <p class="text-sm text-atelier-700 mt-2 pl-7 font-light">
+                        Les cours de couture ont lieu <strong>tous les samedis</strong> à l'atelier et la rentrée se fait le <strong>1er septembre</strong>. Pour garantir une qualité d'apprentissage et un encadrement haute couture optimal, les sessions accueillent de <strong>7 à 10 élèves par cours</strong>. Les inscriptions se font sur réservation par SMS ou Instagram.
+                    </p>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-atelier-50 rounded-2xl p-6 border border-atelier-200">
+                    <h3 class="font-serif text-lg font-bold text-atelier-900 flex items-center gap-3">
+                        <span class="text-atelier-accent font-sans text-base">04.</span>
+                        Comment fonctionne la formule de recyclage de vêtements ?
+                    </h3>
+                    <p class="text-sm text-atelier-700 mt-2 pl-7 font-light">
+                        Vous m'apportez un ou plusieurs vêtements que vous ne portez plus (par exemple : une veste trop large, une longue robe imprimée). Lors du dépôt, nous discutons de vos besoins et de vos envies. Nous pouvons transformer une robe en un ensemble haut et jupe moderne, ou utiliser la doublure ou le tweed d'un vêtement de famille pour façonner un accessoire ou une nouvelle pièce sur-mesure.
+                    </p>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-atelier-50 rounded-2xl p-6 border border-atelier-200">
+                    <h3 class="font-serif text-lg font-bold text-atelier-900 flex items-center gap-3">
+                        <span class="text-atelier-accent font-sans text-base">05.</span>
+                        Pourquoi acceptez-vous uniquement les SMS ?
+                    </h3>
+                    <p class="text-sm text-atelier-700 mt-2 pl-7 font-light">
+                        La couture de précision et la pédagogie durant mes cours exigent calme et grande attention. Afin de ne pas interrompre le travail sur vos tissus précieux à chaque sonnerie téléphonique, le contact par SMS permet de documenter précisément vos demandes et d'y répondre durant les pauses dédiées. C'est l'assurance d'un service fluide et de la meilleure qualité !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-atelier-900 text-atelier-200 pt-16 pb-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-white/5">
+                
+                <!-- Brand Info Column -->
+                <div class="md:col-span-2 space-y-6">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl tracking-widest font-light text-white">
+                            OLENA <span class="font-normal italic text-atelier-accent">MANILYUK</span> KOLAN
+                        </span>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="h-[1px] w-6 bg-atelier-accent"></span>
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-atelier-200 font-semibold">Salon Mode Luxe &bull; Haute Couture & Cours</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-atelier-200/70 max-w-sm leading-relaxed font-light">
+                        Artisan d'art diplômée. Des retouches quotidiennes aux créations de mode les plus prestigieuses à l'Atelier.
+                    </p>
+                    <div class="flex gap-4 pt-2">
+                        <a href="https://www.instagram.com/olena_salon_luxe/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-atelier-accent hover:text-atelier-accent flex items-center justify-center transition-all text-lg" title="Suivez-nous sur Instagram @olena_salon_luxe">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="text-xs text-white/50 space-y-1">
+                        <p>Atelier d'enregistrement légal au répertoire des métiers</p>
+                        <p class="font-semibold text-white/80">SIRET : 951 675 875 00045</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Quick links -->
+                <div class="space-y-4">
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-white">Le Savoir-Faire</h4>
+                    <ul class="space-y-2 text-xs text-atelier-200/80 font-light">
+                        <li><a href="#services" class="hover:text-atelier-accent transition-colors">Retouches complexes</a></li>
+                        <li><a href="#services" class="hover:text-atelier-accent transition-colors">Ourlets main & machine</a></li>
+                        <li><a href="#services" class="hover:text-atelier-accent transition-colors">Créations Sur Mesure</a></li>
+                        <li><a href="#recyclage" class="hover:text-atelier-accent transition-colors">Upcycling de tissus nobles</a></li>
+                        <li><a href="#cours" class="hover:text-atelier-accent font-semibold text-atelier-accent transition-colors">Cours de Couture du Samedi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Booking Quick notice -->
+                <div class="space-y-4">
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-white">Prise de contact</h4>
+                    <div class="space-y-2 text-xs text-atelier-200/80 font-light">
+                        <p class="flex items-center gap-2">
+                            <i class="fa-solid fa-comment-sms text-atelier-accent"></i>
+                            <a href="sms:+33782412624" class="font-semibold text-white hover:text-atelier-accent">07 82 41 26 24</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-atelier-accent"></i>
+                            <a href="https://www.instagram.com/olena_salon_luxe/" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-atelier-accent">@olena_salon_luxe</a>
+                        </p>
+                        <p class="text-emerald-400 font-medium">SMS ou Instagram Uniquement</p>
+                        <p class="text-[11px] text-white/40 italic font-serif">Merci de détailler votre projet d'ajustement ou votre demande de cours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom footer bar -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40">
+                <p>&copy; 2026 Olena Manilyuk Kolan &bull; Salon Mode Luxe. Tous droits réservés. Hébergé sur salonmodeluxe.fr</p>
+                <div class="flex gap-6">
+                    <span onclick="toggleLegalModal()" class="hover:text-white transition-colors cursor-pointer underline">Mentions Légales</span>
+                    <span onclick="toggleLegalModal()" class="hover:text-white transition-colors cursor-pointer underline">Gestion des Données (RGPD)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legal Modal (Mentions Légales & RGPD) -->
+    <div id="legal-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-atelier-900/80 backdrop-blur-sm transition-all duration-300">
+        <div class="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-10 max-h-[85vh] overflow-y-auto relative text-atelier-900 shadow-2xl border border-atelier-200">
+            <button onclick="toggleLegalModal()" class="absolute top-5 right-5 text-atelier-700 hover:text-atelier-accent transition-colors" aria-label="Fermer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="font-serif text-2xl sm:text-3xl text-atelier-900 border-b border-atelier-200 pb-4 mb-6">Mentions Légales & Conformité</h3>
+            <div class="space-y-6 text-sm text-atelier-800 leading-relaxed font-light">
+                <div>
+                    <h4 class="font-semibold text-atelier-900 mb-1">1. Éditeur du Site</h4>
+                    <p>Le site internet <strong>salonmodeluxe.fr</strong> est édité par :</p>
+                    <p class="mt-1 font-medium text-atelier-900">Olena Manilyuk Kolan EI</p>
+                    <p>Statut : Entrepreneur Individuel (EI)</p>
+                    <p>SIRET : 951 675 875 00045</p>
+                    <p class="text-amber-700 font-medium">📍 Adresse professionnelle : Auray, Bretagne</p>
+                    <p>Téléphone de contact : 07 82 41 26 24</p>
+                    <p>Directrice de la publication : Olena Manilyuk Kolan</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-atelier-900 mb-1">2. Hébergement du Site</h4>
+                    <p>Le site est hébergé par :</p>
+                    <p class="text-amber-700 font-medium">GitHub Pages</p>
+                    <p>Adresse de l'hébergeur : GitHub, Inc. - 88 Colin P. Kelly Jr. St. San Francisco, CA 94107, USA</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-atelier-900 mb-1">3. Propriété Intellectuelle</h4>
+                    <p>Tous les éléments du site (textes, images, structure générale, logos) sont la propriété exclusive d'Olena Manilyuk Kolan. Toute reproduction ou représentation totale ou partielle de ce site, sans l'autorisation expresse de l'éditeur, est strictement interdite.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-atelier-900 mb-1">4. Protection des Données Personnelles (RGPD)</h4>
+                    <p>Ce site ne dispose pas de base de données et ne conserve aucune information utilisateur. Les outils interactifs de contact (comme le Générateur de SMS) fonctionnent de manière 100% locale sur votre appareil de façon éphémère et ne collectent aucune donnée.</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-4 border-t border-atelier-200 flex justify-end">
+                <button onclick="toggleLegalModal()" class="px-6 py-2.5 bg-atelier-900 text-white rounded-xl hover:bg-atelier-accent hover:text-atelier-900 transition-all text-xs font-semibold">
+                    Fermer la fenêtre
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification Container -->
+    <div id="custom-toast" class="fixed bottom-5 right-5 z-[100] bg-red-600 text-white px-6 py-4 rounded-2xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3">
+        <i class="fa-solid fa-triangle-exclamation text-lg text-white"></i>
+        <span id="toast-message" class="text-sm font-medium">Message d'erreur</span>
+    </div>
+
+    <!-- Custom Web App Interactive Scripts -->
+    <script>
+        // Setup state variables
+        let selectedServices = [];
+        let totalCost = 0;
+
+        // Mobile Menu Toggling
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', toggleMenu);
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Elegant Toast Message trigger
+        function showToast(message) {
+            const toast = document.getElementById('custom-toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 4000);
+        }
+
+        // Legal Modal Trigger
+        function toggleLegalModal() {
+            const modal = document.getElementById('legal-modal');
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
+        }
+
+        // Direct action when clicking "S'inscrire" from the sewing classes section
+        function selectLessonsAndScroll() {
+            const checkbox = document.getElementById('checkbox-lessons');
+            if (checkbox) {
+                checkbox.checked = true;
+                calculateTotal();
+            }
+            
+            // Populate details with a friendly default message
+            const detailInput = document.getElementById('sms-detail');
+            if (detailInput) {
+                detailInput.value = "Je souhaiterais m'inscrire pour la session des cours de couture du samedi à partir du 1er septembre.";
+            }
+            
+            copyEstimateAndScrollToContact();
+        }
+
+        // Live Cost Estimator calculation logic
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('input[name="calc-service"]');
+            selectedServices = [];
+            totalCost = 0;
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const price = parseInt(cb.getAttribute('data-price')) || 0;
+                    selectedServices.push({
+                        name: cb.value,
+                        price: price
+                    });
+                    totalCost += price;
+                }
+            });
+
+            // Update Estimate Visualizer on UI
+            const selectedListEl = document.getElementById('calc-selected-list');
+            const totalEl = document.getElementById('calc-total');
+
+            if (selectedServices.length === 0) {
+                selectedListEl.innerHTML = `<span class="text-white/40 italic text-xs">Aucun service sélectionné</span>`;
+                totalEl.innerText = "0 €";
+            } else {
+                selectedListEl.innerHTML = selectedServices.map(item => {
+                    const priceLabel = item.price > 0 ? `${item.price} €` : "Sur demande / devis";
+                    return `<div class="flex justify-between text-xs py-0.5 border-b border-white/5">
+                        <span class="text-white/80">• ${item.name}</span>
+                        <span class="font-semibold text-atelier-accent">${priceLabel}</span>
+                    </div>`;
+                }).join('');
+
+                // Display dynamic price or devis
+                const hasCustomProject = selectedServices.some(item => item.price === 0);
+                if (hasCustomProject && totalCost === 0) {
+                    totalEl.innerText = "Sur devis";
+                } else if (hasCustomProject && totalCost > 0) {
+                    totalEl.innerText = `${totalCost} € + Devis`;
+                } else {
+                    totalEl.innerText = `${totalCost} €`;
+                }
+            }
+
+            // Sync with SMS generator preview
+            updateSMSPreview();
+        }
+
+        // Action when user clicks "Valider" in the calculator: it formats and scrolls to Contact
+        function copyEstimateAndScrollToContact() {
+            // Update SMS block
+            const smsEstimationBlock = document.getElementById('sms-estimation-block');
+            const smsEstimatedPrice = document.getElementById('sms-estimated-price');
+            const smsEstimatedText = document.getElementById('sms-estimated-text');
+
+            if (selectedServices.length > 0) {
+                smsEstimationBlock.classList.remove('hidden');
+                
+                const servicesString = selectedServices.map(s => s.name).join(', ');
+                const hasCustom = selectedServices.some(s => s.price === 0);
+                const finalPriceStr = hasCustom ? `~${totalCost}€ (avec option sur devis)` : `${totalCost}€`;
+                
+                smsEstimatedPrice.innerText = finalPriceStr;
+                smsEstimatedText.innerText = `Services présélectionnés : ${servicesString}`;
+            } else {
+                smsEstimationBlock.classList.add('hidden');
+            }
+
+            // Smooth scroll to Contact Builder
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            updateSMSPreview();
+        }
+
+        // Live text formatting for the SMS preview box
+        function updateSMSPreview() {
+            const name = document.getElementById('sms-name').value.trim() || "[Votre Nom]";
+            const detail = document.getElementById('sms-detail').value.trim() || "[Détails de vos besoins, de vos tissus, ou inscription aux cours]";
+            
+            let servicesPart = "";
+            if (selectedServices.length > 0) {
+                const names = selectedServices.map(s => s.name).join(', ');
+                servicesPart = `\n- Choix : ${names}`;
+                const hasCustom = selectedServices.some(s => s.price === 0);
+                const priceValue = hasCustom ? `Sur devis / tarif de rentrée` : `Estimation : ${totalCost}€`;
+                servicesPart += `\n- (${priceValue})`;
+            }
+
+            const previewText = `Bonjour Olena,\nJe m'appelle ${name}.\nJe souhaiterais vous contacter :${servicesPart}\n\nPlus de détails : ${detail}\n\nMerci de m'indiquer vos disponibilités pour un rdv à l'atelier.`;
+            
+            document.getElementById('sms-preview-text').innerText = previewText;
+        }
+
+        // Hook up change listeners to live update SMS
+        document.getElementById('sms-name').addEventListener('input', updateSMSPreview);
+        document.getElementById('sms-detail').addEventListener('input', updateSMSPreview);
+
+        // Core Action: Opens native SMS application
+        function sendPreparedSMS() {
+            const name = document.getElementById('sms-name').value.trim();
+            const detail = document.getElementById('sms-detail').value.trim();
+
+            if (!name) {
+                showToast("Veuillez indiquer votre prénom et nom dans le formulaire pour que le SMS soit complet !");
+                document.getElementById('sms-name').focus();
+                return;
+            }
+
+            let servicesPart = "";
+            if (selectedServices.length > 0) {
+                const names = selectedServices.map(s => s.name).join(', ');
+                servicesPart = `\n- Choix : ${names}`;
+                const hasCustom = selectedServices.some(s => s.price === 0);
+                const priceValue = hasCustom ? `Sur devis / tarif de rentrée` : `Estimation : ${totalCost}€`;
+                servicesPart += `\n- (${priceValue})`;
+            }
+
+            const detailMessage = detail ? detail : "Je souhaite convenir d'un rendez-vous avec vous.";
+            const fullSmsText = `Bonjour Olena,\nJe m'appelle ${name}.\nJe souhaiterais vous contacter :${servicesPart}\n\nPlus de détails : ${detailMessage}\n\nMerci de m'indiquer vos disponibilités pour un rdv à l'atelier.`;
+
+            // Mobile compatibility link generation for SMS
+            const phoneNumber = "+33782412624";
+            const encodedText = encodeURIComponent(fullSmsText);
+            
+            // Build direct SMS link (compatible with iOS and Android)
+            let smsUrl = `sms:${phoneNumber}?body=${encodedText}`;
+            if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                smsUrl = `sms:${phoneNumber}&body=${encodedText}`;
+            }
+
+            // Open the user's native SMS app
+            window.location.href = smsUrl;
+        }
+
+        // Initial setup run
+        window.onload = function() {
+            calculateTotal();
+            updateSMSPreview();
+            
+            // Smooth reveal scroll animation helper
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealOnScroll = function() {
+                for (let i = 0; i < revealElements.length; i++) {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = revealElements[i].getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < windowHeight - elementVisible) {
+                        revealElements[i].classList.add('active');
+                    }
+                }
+            };
+            
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // run once at start
+        };
+    </script>
+</body>
+</html>
